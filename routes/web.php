@@ -180,3 +180,15 @@ route::get('workingmdd',function(){
 
 route::view('sotedata','storedata_without_object');
 route::post('store_without_object',[UserController::class,'store_without_object']);
+
+use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
+
+///////////////collaction methord ???????????
+route::get('collaction_method',function(){
+    $arr=['a','b','c'];
+
+
+
+});
+
