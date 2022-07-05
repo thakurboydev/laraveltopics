@@ -25,8 +25,10 @@ class User_Validetion extends FormRequest
     {
         // dd($_REQUEST);
         return [
+
+            'psw'=>'required|min:6',
+            'repsw'=>'required_with:psw|same:psw|min:6',
             'email'=>'required|unique:user_register|email',
-            'psw'=>'required'
         ];
     }
     public function messages(){
@@ -34,6 +36,7 @@ class User_Validetion extends FormRequest
         return [
             'uname.required' => 'A name is required',
             'psw.required' => 'A password is required',
+            'repsw.same' => 'Password not match ',
         ];
     }
 }

@@ -7,6 +7,7 @@ use App\Models\User;
 use Eception;
 use  App\Event\Events;
 use App\Models\store_data_without_objs;
+use App\Jobs\check_jobs;
 
 class UserController extends Controller
 {

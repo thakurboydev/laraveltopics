@@ -31,8 +31,8 @@ class check_jobs implements ShouldQueue
      */
     public function handle()
     {
-        dd(11);
-        Mail::to('harsukh21@gmail.org')->send(new \App\Mail\NewMail());
+
+        Mail::to('aaasfdsgdsxcvxgdsf@yopmail.com')->send(new \App\Mail\NewMail());
 
     }
 }

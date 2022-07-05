@@ -14,4 +14,19 @@ class store_data_without_objs extends Model
             'name',
             'password',
     ];
+    public  function getObservableEvents(){
+
+        return parent::getObservableEvents() ;
+
+
+    }
+    public static function received($callback)
+    {
+        // dump('smdfbgsdfhjsasjhfdgajshfjhsajhfjashdfjhgja');
+        $callback::registerModelEvent($callback);
+    }
+    public  static  function registerModelEvent($callback)
+    {
+      dump('asdfafasfasfasfasfafadfadfas');
+    }
 }

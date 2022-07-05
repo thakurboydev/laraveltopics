@@ -6,6 +6,7 @@ use App\Event\Events;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
+
 class eventlistener
 {
     /**

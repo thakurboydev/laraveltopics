@@ -22,7 +22,11 @@ use App\Models\User;
 
 class GuardController extends Controller
 {
+    public   function _construct(){
+         $val=10;
 
+        $this->val=$val;
+        }
     public function login_register_form()
     {
             return view('guards.login_register');

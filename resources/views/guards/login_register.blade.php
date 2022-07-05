@@ -101,7 +101,10 @@ print_r($errors->all());
     {{-- <div class="imgcontainer">
         <img src="img_avatar2.png" alt="Avatar" class="avatar">
     </div> --}}
+    <p>
 
+
+    </p>
   <div class="container">
     <label for="email"><b>email</b></label>
     <input type="email" placeholder="Enter email" name="email" >
@@ -115,6 +118,12 @@ print_r($errors->all());
     <input type="password" placeholder="Enter Password" name="psw" >
     <span class="text-denger" style="color: #f44336">
         @error('psw')
+            {{$message}}
+            @enderror
+        </span><br><br>
+    <input type="password" placeholder="Confirm  Password" name="repsw" >
+    <span class="text-denger" style="color: #f44336">
+        @error('repsw')
             {{$message}}
             @enderror
         </span><br><br>

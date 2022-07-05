@@ -30,6 +30,7 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        dump('askdfghashfjhsa');
         //
     }
 }

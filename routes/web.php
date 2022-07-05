@@ -90,8 +90,13 @@ route::get('check_session',[GuardController::class,'check_session']);
 
 route::get('send_Email',function(){
 //    dispatch(new  App\Jobs\check_jobs() )->delay(now()->addSecond(value(3)));
-     check_jobs::dispatch();
-    //  check_jobs::dispatch()->onQueue('processing');
+    //  Dispatch(function(){
+
+
+    //     })->delay(now());
+    Mail::to('shekharchauhan7248@gmail.com')->send(new \App\Mail\NewMail());
+
+        //  check_jobs::dispatch()->delay(now());
     // $newjob= new check_jobs();
     // dispatch($newjob);
     // Queue::push(new check_jobs());
@@ -184,11 +189,36 @@ route::post('store_without_object',[UserController::class,'store_without_object'
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 
-///////////////collaction methord ???????????
-route::get('collaction_method',function(){
+///////////////collus
+use App\Models\User_Register;
+
+route::get('collaction_method',function( ){
+    dd($this->val);
+
     $arr=['a','b','c'];
-
-
+  $data=  user_register::all();
+  dd($data[0]);
+    return gettype($data);
 
 });
+
+
+
+
+
+////////// google capture ////
+
+
+// make a slug usening str class
+use App\Models\store_data_without_objs;
+route::get('collaction_method',function( ){
+    $val='sakdf askfn askfn askdfnna askf aksf askdf 121     w ';
+
+    $slug=Str::slug($val);
+    // dump(     11);
+    dump($slug);
+  $soredata=  store_data_without_objs::first();
+    dump($soredata);
+});
+
 
